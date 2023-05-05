@@ -16,4 +16,5 @@ public interface IDoctorService {
     void updateDoctorStatus(Status status, Integer id);
 
     void updateDoctorDepartment(String department, Integer id);
+
 }

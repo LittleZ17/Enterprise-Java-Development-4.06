@@ -36,4 +36,11 @@ public class Doctor {
         this.status = status;
         this.patientList = patientList;
     }
+
+    public Doctor(Integer employeeId, String department, String name, Status status) {
+        this.employeeId = employeeId;
+        this.department = department;
+        this.name = name;
+        this.status = status;
+    }
 }

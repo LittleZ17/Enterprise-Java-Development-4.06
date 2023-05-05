@@ -20,17 +20,13 @@ public class DoctorService implements IDoctorService {
     /* *********** GET *********** */
 
     public List<Doctor> getDoctorsByStatus(Optional<Status> status){
-        if(status.isPresent()){
-            return doctorRepository.findByStatus(status.get());
-        }
-        return null;
+        if(status.isEmpty()) return null;
+        return doctorRepository.findByStatus(status.get());
     }
 
     public List<Doctor> getDoctorsByDepartment(Optional<String> department){
-        if (department.isPresent()) {
-            return doctorRepository.findByDepartment(department.get());
-        }
-        return null;
+        if (department.isEmpty()) return null;
+        return doctorRepository.findByDepartment(department.get());
     }
 
     public Doctor getDoctor(Integer id){
@@ -38,6 +34,7 @@ public class DoctorService implements IDoctorService {
         if (doctorOptional.isEmpty()) return  null;
         return doctorOptional.get();
     }
+
 
     /* *********** PATCH *********** */
 

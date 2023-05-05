@@ -1,6 +1,8 @@
 package Labs.EnterpriseJavaDevelopment42.controller.interfaces;
 
 import Labs.EnterpriseJavaDevelopment42.model.Patient;
+import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Date;
@@ -15,5 +17,7 @@ public interface IPatientController {
     List<Patient> getPatientsByDepartmentAdd(String department);
     List<Patient> getPatientsDoctorOff();
     void savePatient(Patient patient);
+    void updatePatients( Patient patient,  Integer id);
 
-}
+
+    }

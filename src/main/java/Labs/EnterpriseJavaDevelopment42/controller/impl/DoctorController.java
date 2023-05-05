@@ -40,7 +40,6 @@ public class DoctorController implements IDoctorController {
     }
 
     @GetMapping("/doctors/{id}")
-    @ResponseStatus(HttpStatus.OK)
     public Doctor getDoctor(@PathVariable Integer id){
         return doctorService.getDoctor(id);
     }
@@ -67,6 +66,4 @@ public class DoctorController implements IDoctorController {
     public void updateDoctorDepartment(@RequestBody DoctorDepartmentDTO doctorDepartmentDTO, @PathVariable Integer id){
         doctorService.updateDoctorDepartment(doctorDepartmentDTO.getDepartment(), id);
     }
-
-
 }
